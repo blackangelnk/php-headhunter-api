@@ -33,7 +33,7 @@ Official API docs available [here](https://github.com/hhru/api).
 
 ## Dependencies
 
-Requires PHP 5.6 or above.
+Requires PHP 8.0.
 
 
 ## Installation
