@@ -27,6 +27,7 @@ use seregazhuk\HeadHunterApi\Exceptions\WrongEndPointException;
  * @property Metro $metro
  * @property Auth $auth
  * @property Languages $languages
+ * @property ProfessionalRoles $professionalRoles
  * @property Faculties $faculties
  *
  * @method $this setLocale(string $locale)
