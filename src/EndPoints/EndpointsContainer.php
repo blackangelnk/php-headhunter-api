@@ -28,6 +28,7 @@ use seregazhuk\HeadHunterApi\Exceptions\WrongEndPointException;
  * @property Auth $auth
  * @property Languages $languages
  * @property ProfessionalRoles $professionalRoles
+ * @property Countries $countries
  * @property Faculties $faculties
  *
  * @method $this setLocale(string $locale)
