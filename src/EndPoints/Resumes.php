@@ -5,12 +5,13 @@ namespace seregazhuk\HeadHunterApi\EndPoints;
 use seregazhuk\HeadHunterApi\Traits\HasView;
 use seregazhuk\HeadHunterApi\Traits\HasVisibilityList;
 use seregazhuk\HeadHunterApi\Traits\HasSimilarVacancies;
+use seregazhuk\HeadHunterApi\Traits\Searchable;
 
 class Resumes extends Endpoint
 {
     const RESOURCE = 'resumes';
 
-    use HasView, HasSimilarVacancies, HasVisibilityList;
+    use HasView, HasSimilarVacancies, HasVisibilityList, Searchable;
 
     /**
      * @return array
