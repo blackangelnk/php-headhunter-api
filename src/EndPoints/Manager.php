@@ -28,4 +28,23 @@ class Manager extends Endpoint
 
         return $this->getResource($uri);
     }
+
+    /**
+     * Get manager method access
+     * @param integer $managerId
+     * @return array
+     */
+    public function access($managerId = null)
+    {
+        $employerId = $this->getCurrentEmployerId();
+        $managerId = $managerId ?: $this->getCurrentManagerId();
+
+        $uri = str_replace(
+            ['{employer_id}', '{manager_id}'],
+            [$employerId, $managerId],
+            '{employer_id}/managers/{manager_id}/method_access'
+        );
+
+        return $this->getResource($uri);
+    }
 }
