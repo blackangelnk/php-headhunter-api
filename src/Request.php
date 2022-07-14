@@ -169,7 +169,8 @@ class Request
             $params
         );
 
-        return http_build_query($params);
+        // hh api accepts numeric arrays as key=value&key=value1
+        return preg_replace('/%5B[0-9]+%5D/', '', http_build_query($params));
     }
 
     /**
