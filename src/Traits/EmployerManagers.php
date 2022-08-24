@@ -24,13 +24,14 @@ trait EmployerManagers
      * Get employer managers
      *
      * @param string|bool $employerId default resolved from profile
+     * @param array $params
      * @return array
      */
-    public function getManagers($employerId = false)
+    public function getManagers($employerId = false, array $params = [])
     {
         $employerId = $this->resolveEmployerId($employerId);
 
-        return $this->getResource("$employerId/managers", []);
+        return $this->getResource("$employerId/managers", $params);
     }
 
     /**
